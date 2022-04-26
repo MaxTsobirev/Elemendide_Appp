@@ -23,7 +23,7 @@ namespace Elemendide_App
                 BackgroundColor = Color.LightGreen,
             };*/
 
-            Button Timer_btn = new Button()
+            /*Button Timer_btn = new Button()
             {
                 Text = "Timer",
                 BackgroundColor = Color.LightGreen,
@@ -38,7 +38,7 @@ namespace Elemendide_App
                 Text = "Date/Time",
                 BackgroundColor = Color.LightGreen,
             };
-            /*Button SS_btn = new Button()
+            Button SS_btn = new Button()
             {
                 Text = "Stepper/Slider",
                 BackgroundColor = Color.LightGreen,
@@ -78,17 +78,22 @@ namespace Elemendide_App
                 Text = "Maakonnad",
                 BackgroundColor = Color.LightGreen,
             };
+            Button List_btn = new Button()
+            {
+                Text = "ListView",
+                BackgroundColor = Color.LightGreen,
+            };
             StackLayout st = new StackLayout()
             {
-                Children = { /*Ent_btn ,*/ Timer_btn , cliker , Date_btn , /*SS_btn,*/Frame_btn,Image_btn,Valg_btn,RGB_btn,TTT_btn,Cnt_btn,Maak_btn }
+                Children = { /*Ent_btn , Timer_btn , cliker , Date_btn , SS_btn,*/Frame_btn,Image_btn,Valg_btn,RGB_btn,TTT_btn,Cnt_btn,Maak_btn,List_btn }
             };
 
             st.BackgroundColor = Color.AntiqueWhite;
             Content = st;
             //Ent_btn.Clicked += Ent_btn_Clicked;
-            Timer_btn.Clicked += Timer_btn_Clicked;
-            cliker.Clicked += Cliker_Clicked;
-            Date_btn.Clicked += Date_btn_Clicked;
+            //Timer_btn.Clicked += Timer_btn_Clicked;
+            //cliker.Clicked += Cliker_Clicked;
+            //Date_btn.Clicked += Date_btn_Clicked;
             //SS_btn.Clicked += SS_btn_Clicked;
             Frame_btn.Clicked += Frame_btn_Clicked;
             Image_btn.Clicked += Image_btn_Clicked;
@@ -97,7 +102,13 @@ namespace Elemendide_App
             TTT_btn.Clicked += TTT_btn_Clicked;
             Cnt_btn.Clicked += Cnt_btn_Clicked;
             Maak_btn.Clicked += Maak_btn_Clicked;
+            List_btn.Clicked += List_btn_Clicked;
             
+        }
+
+        private async void List_btn_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new List_Page());
         }
 
         private async void Maak_btn_Clicked(object sender, EventArgs e)
